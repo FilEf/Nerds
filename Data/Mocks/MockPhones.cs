@@ -10,7 +10,7 @@ namespace Nerds.Data.Mocks
 {
     public class MockPhones : IAllPhones
     {
-        private readonly IPhonesCategory _CategoryPhones = new MockCategory();
+        private readonly IPhonesCategory _categoryPhones = new MockCategory();
         public IEnumerable<Phone> Phones {
             get
             {
@@ -24,7 +24,7 @@ namespace Nerds.Data.Mocks
                         Price = 5000.99M,
                         IsFavorite = true,
                         Available = true,
-                        Category =_CategoryPhones.AllCategories.First()
+                        Category =_categoryPhones.AllCategories.First()
                     },
 
                     new Phone
@@ -35,14 +35,14 @@ namespace Nerds.Data.Mocks
                         Price = 25000.99M,
                         IsFavorite = true,
                         Available = true,
-                        Category =_CategoryPhones.AllCategories.Last()
+                        Category =_categoryPhones.AllCategories.Last()
                     }
                 };
             }
         }
         public IEnumerable<Phone> GetFavCars { get; set; }
 
-        public Phone getObjectPhone(DebugInfoGenerator phoneId)
+        public Phone getObjectPhone(int phoneId)
         {
             throw new NotImplementedException();
         }

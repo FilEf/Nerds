@@ -11,6 +11,6 @@ namespace Nerds.Data.Interfaces
     {
         IEnumerable<Phone> Phones { get; }
         IEnumerable<Phone> GetFavCars { get; set; }
-        Phone getObjectPhone(DebugInfoGenerator phoneId);
+        Phone getObjectPhone(int phoneId);
     }
 }
